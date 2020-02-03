@@ -1,0 +1,62 @@
+'use strict'
+var gNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+var RSIZE = 4;
+var CSIZE = 4;
+var TOTAL_SIZE = 16;
+var nextNum = 1;
+
+
+
+
+function init() {
+    tableRender();
+}
+
+function tableRender() {
+    var numbers = [...gNumbers];
+    shuffle(numbers);
+    var strHtml = '';
+    for (var i = 0; i < CSIZE; i++) {
+        strHtml += '<tr>';
+        for (var j = 0; j < RSIZE; j++) {
+            var cell = numbers.pop();
+            strHtml += `<td class="cell" onclick="cellClicked(this)">${cell}</td>`;
+        }
+        strHtml += '</tr>';
+    }
+    var elTable = document.querySelector('.myTable');
+    elTable.innerHTML = strHtml;
+
+}
+
+
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = now - countDownDate.getTime();
+
+    // Time calculations for days, hours, minutes and seconds
+
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var milisec = Math.floor(distance % (1000 * 60))
+
+    document.querySelector('.timer').innerHTML = `${hours}:${minutes}:${seconds}:${milisec}`;
+}, 1000);
+
+
+function cellClicked(clickedNum) {
+    if (Number(clickedNum.innerText) === nextNum) {
+        clickedNum.style.setProperty('background-color', 'blue');
+        nextNum++;
+        x;
+    }
+}
+
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+}

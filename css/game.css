@@ -1,0 +1,66 @@
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: 50px;
+    color: white;
+    font-family: cursive;
+    background-color: violet;
+    border-radius: 25%;
+}
+
+.main {
+    background-image: url(https://previews.123rf.com/images/vitaliyvill/vitaliyvill1705/vitaliyvill170500030/78682836-cartoon-night-game-background-seamless-background-for-games-mobile-applications-and-computers-.jpg);
+}
+
+.logo {
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 400px;
+    margin-right: 400px;
+    width: 200px;
+    height: auto;
+}
+
+.picture {
+    position: absolute;
+    left: 50%;
+    top: 26%;
+    width: 300px;
+    height: auto;
+    border-radius: 25%;
+    border-color: black;
+}
+
+.sentence1 {
+    text-align: center;
+    margin-top: 90px;
+    margin-left: 400px;
+    margin-right: 400px;
+    height: auto;
+    background-color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 15%;
+    font-size: 30px;
+    color: white;
+    border: 20%;
+    border-color: black;
+    cursor: pointer;
+    width: 600px
+}
+
+.sentence2 {
+    position: absolute;
+    left: 30%;
+    bottom: 15%;
+    height: auto;
+    text-align: center;
+    background-color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 15%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    width: 600px
+}
